@@ -1,16 +1,52 @@
-# React + Vite
+# IIT BBS Hackathon Project - Wulaifying Round
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **React-based Web Application showcasing multiple interactive frontend components**  
+> Developed for the **Wulaifying Round** of the **IIT Bhubaneswar Hackathon**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🏆 Project Overview
 
-## React Compiler
+This project is a **single-page React application** that demonstrates **six key frontend features** in a clean, interactive, and responsive design. Each feature is implemented as a separate component and displayed sequentially on the webpage. The project highlights practical use of **React**, **React Router**, and modern **CSS animations and effects**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ⚡ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Parallax Animation**  
+   - Engaging parallax scrolling effect at the top of the page.  
+   - Creates a visually appealing introduction to the app.
+
+2. **Cards Component**  
+   - Interactive card layout showcasing content.  
+   - Responsive and modern design.
+
+3. **Ripple Effect Component**  
+   - Buttons or divs with a smooth ripple effect on click.  
+   - Demonstrates dynamic UI interaction.
+
+4. **Carousel Switch**  
+   - Image or content carousel with smooth transitions.  
+   - Allows users to navigate through slides effortlessly.
+
+5. **Striking Effects Component**  
+   - Eye-catching visual effects applied to elements.  
+   - Perfect for highlighting content dynamically.
+
+6. **Testimonials Animation**  
+   - Animated testimonial section with smooth transitions.  
+   - Enhances credibility and user engagement.
+
+---
+
+## 🛠 Technologies Used
+
+- **React.js**  
+- **CSS3 / SCSS** (animations, hover effects, parallax)  
+- **React Router** (for routing between pages/components)  
+- **Optional Libraries:** (if used for carousel, ripple, or animations)  
+
+---
+
+## 📦 Project Structure
+
