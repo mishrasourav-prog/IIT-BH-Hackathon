@@ -1,0 +1,242 @@
+.card-section {
+    padding: 8rem 2rem;
+    background: #0a0a0a;
+    position: relative;
+    transition: opacity 0.6s ease;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    background: linear-gradient(135deg, #ffffff 0%, #9ca3af 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .brand-kits-container {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .brand-kit-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  .brand-kit-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+  }
+  
+  .brand-kit-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .brand-kit-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+  }
+  
+  .checkbox {
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+  
+  .checkbox.checked {
+    background: #6366f1;
+    border-color: #6366f1;
+  }
+  
+  .brand-icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .brand-name {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .settings-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  
+  .settings-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .brand-kit-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .brand-kit-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .brand-kit-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .brand-kit-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card-section {
+      padding: 5rem 1.5rem;
+    }
+  
+    .section-title {
+      margin-bottom: 2.5rem;
+    }
+  
+    .brand-kits-container {
+      max-width: 100%;
+    }
+  
+    .brand-kit-card {
+      padding: 1rem 1.25rem;
+    }
+  
+    .brand-name {
+      font-size: 1rem;
+    }
+  
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      font-size: 1.3rem;
+    }
+  
+    .checkbox {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-section {
+      padding: 4rem 1rem;
+    }
+  
+    .brand-kit-card {
+      padding: 0.875rem 1rem;
+    }
+  
+    .brand-kit-left {
+      gap: 0.75rem;
+    }
+  
+    .brand-name {
+      font-size: 0.95rem;
+    }
+  
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+    }
+  
+    .checkbox {
+      width: 18px;
+      height: 18px;
+    }
+  
+    .settings-btn {
+      padding: 0.4rem;
+    }
+  
+    .settings-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .brand-kit-card {
+      padding: 0.75rem 0.875rem;
+    }
+  
+    .brand-kit-left {
+      gap: 0.625rem;
+    }
+  
+    .brand-name {
+      font-size: 0.9rem;
+    }
+  
+    .brand-icon {
+      width: 30px;
+      height: 30px;
+      font-size: 1.1rem;
+    }
+  }
