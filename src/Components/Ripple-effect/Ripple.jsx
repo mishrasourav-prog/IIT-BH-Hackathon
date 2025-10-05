@@ -2,29 +2,29 @@ import React, { useState } from 'react';
 import './Ripple.css';
 
 const Ripple = () => {
-  const [ripples, setRipples] = useState({});
+  const [waterEffects, setWaterEffects] = useState({});
 
-  const createRipple = (e, cardId) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+  const createWaterRipple = (e, itemId) => {
+    const item = e.currentTarget;
+    const bounds = item.getBoundingClientRect();
+    const xPos = e.clientX - bounds.left;
+    const yPos = e.clientY - bounds.top;
 
-    const rippleId = Date.now();
-    setRipples(prev => ({
+    const effectId = Date.now() + Math.random();
+    setWaterEffects(prev => ({
       ...prev,
-      [cardId]: [...(prev[cardId] || []), { id: rippleId, x, y }]
+      [itemId]: [...(prev[itemId] || []), { id: effectId, x: xPos, y: yPos }]
     }));
 
     setTimeout(() => {
-      setRipples(prev => ({
+      setWaterEffects(prev => ({
         ...prev,
-        [cardId]: (prev[cardId] || []).filter(r => r.id !== rippleId)
+        [itemId]: (prev[itemId] || []).filter(r => r.id !== effectId)
       }));
-    }, 800);
+    }, 1200);
   };
 
-  const services = [
+  const servicesList = [
     {
       id: 'web-dev',
       title: 'Web Development',
@@ -43,31 +43,31 @@ const Ripple = () => {
   ];
 
   return (
-    <section id="services" className="services-section">
-      <div className="container">
-        <h2 className="section-title">Our Services</h2>
-        <div className="services-grid">
-          {services.map((service) => (
+    <section className="water-ripple-section">
+      <div className="services-wrapper">
+        <h2 className="main-heading">Our Services</h2>
+        <div className="service-cards-grid">
+          {servicesList.map((service) => (
             <div 
               key={service.id}
-              className="service-card"
-              onMouseMove={(e) => createRipple(e, service.id)}
+              className="interactive-card"
+              onMouseMove={(e) => createWaterRipple(e, service.id)}
             >
-              <div className="ripple-container">
-                {(ripples[service.id] || []).map((ripple) => (
+              <div className="water-effect-layer">
+                {(waterEffects[service.id] || []).map((effect) => (
                   <span
-                    key={ripple.id}
-                    className="ripple"
+                    key={effect.id}
+                    className="water-wave"
                     style={{
-                      left: ripple.x,
-                      top: ripple.y,
+                      left: `${effect.x}px`,
+                      top: `${effect.y}px`,
                     }}
                   />
                 ))}
               </div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
-              <button className="btn btn-outline">Learn More</button>
+              <h3 className="card-heading">{service.title}</h3>
+              <p className="card-text">{service.description}</p>
+              <button className="action-button">Learn More</button>
             </div>
           ))}
         </div>
